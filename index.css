@@ -1,0 +1,218 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #00000C;
+  cursor: none;
+}
+
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  display: none;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid orange;
+}
+
+.custom-cursor img {
+  width: 30px;
+}
+
+.cursorDot {
+  position: absolute;
+  top: 6px;
+  right: 5.9px;
+
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: yellow;
+  transition: 0.3s;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.quotes *, main:not(.text) {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+
+
+header {
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  background-color: #373F51;
+  background-image: url("Images/Banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  padding: 20.7% 0;
+}
+
+header h1 {
+  color: #FF7700;
+  font-size: 70px;
+  margin-bottom: 30px;
+}
+
+header h2 {
+  color: red;
+  font-size: 40px;
+  font-weight: 100;
+  margin: 0;
+
+}
+
+.quotes {
+  color: white;
+  text-align: center;
+  font-size: 23px;
+  line-height: 60px;
+  font-weight: 100;
+  margin: 50px 0 8em 0;
+  font-family: "Noto Serif", serif;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  gap: 10em;
+
+
+}
+
+.left {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30em;
+}
+
+
+.left img {
+  transform: rotate(-10deg);
+}
+
+.right {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30em;
+}
+.right img {
+  transform: rotate(10deg);
+}
+
+main div {
+  margin: auto;
+  
+}
+
+
+.stars {
+  height: 50px;
+  transition: 0.5s;
+  cursor: none;
+}
+
+.text {
+  height: 5em;
+  margin-bottom: -20px;
+  opacity: 0;
+  transition: 0.5s;
+  margin-right: 6em;
+}
+
+.right-text{ 
+  margin-left: 6em !important;
+}
+
+.stars:hover{
+  transform: scale(2);
+}
+
+body:has(#text1 .stars:hover) #text1 .text {
+  opacity: 1;
+  transform: scale(2.5);
+}
+
+body:has(#text2 .stars:hover) #text2 .text {
+  opacity: 1;
+  transform: scale(2.5);
+}
+
+body:has(#text3 .stars:hover) #text3 .text {
+  opacity: 1;
+  transform: scale(2.5);
+}
+
+body:has(#text4 .stars:hover) #text4 .text {
+  opacity: 1;
+  transform: scale(2.5);
+}
+
+body:has(#experience1 .stars:hover) #experience1 .text {
+  opacity: 1;
+  transform: scale(2.5);
+}
+
+
+.instruction {
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  margin: 10em 0 5em 0;
+
+
+}
+
+a {
+  margin: 0;
+  cursor: none;
+  padding: 0;
+}
+
+.grid {
+  display: flex;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  flex-wrap: wrap;
+  left: 0;
+  right: 0;
+  transform: translateX(10px);
+}
+
+.grid_item img {
+  height: 7em;
+  margin-top: -5px;
+
+}
+
+.grid_item {
+  opacity: 0;
+  transition: opacity 15s ease 0.4s;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+.grid_item:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
